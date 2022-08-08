@@ -2,6 +2,7 @@ package controller;
 
 import java.util.ArrayList;
 import model.CafeMenu;
+import model.Clients;
 
 
 
@@ -45,7 +46,7 @@ public class SearchModel {
 	public CafeMenu getCafeMenu(String menuName) {
 		
 		for(CafeMenu menu : cafeMenuList) {
-			if(menu.getCafeMenuName().equals(menuName)) {
+			if(menu.getMenuName().equals(menuName)) {
 				return menu;
 			}
 		}
@@ -75,7 +76,7 @@ public class SearchModel {
 		
 		for (CafeMenu menu : cafeMenuList) {
 			
-			if (menu.getCafeMenuName().equals(menuName)) {
+			if (menu.getMenuName().equals(menuName)) {
 				menu.setMenuPrice(menuPrice);
 				break;
 			}
@@ -91,7 +92,7 @@ public class SearchModel {
 	public void cafeMenuDelete(String menuName) {
 		
 		for(CafeMenu menu : cafeMenuList) {
-			if(menu.getCafeMenuName().equals(menuName)) {
+			if(menu.getMenuName().equals(menuName)) {
 				cafeMenuList.remove(menu);
              
 				break;
@@ -108,6 +109,19 @@ public class SearchModel {
 	public int menuListSize() {
 		return cafeMenuList.size();
 	}
+	
+	 public static Clients CheckClientsID(String clientID) {
+	      // file reader를 통해 회원정보가 들어있는 배열 가져온다 가정 -> ArrayList<Clients>
+	      ArrayList<Clients> clientsInfo = new ArrayList<Clients>();
+	      Clients TempClient = null;
+
+	      for (Clients client : clientsInfo) {
+	         if (client.getClientID().equals(clientID)) {
+	            TempClient = client;
+	         }
+	      }
+	      return TempClient; // 해당 아이디를 가진 회원이 존재하지 않는 경우 null 값 반환
+	   }
 
 
 }

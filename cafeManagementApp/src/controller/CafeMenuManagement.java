@@ -6,6 +6,7 @@ import java.util.Scanner;
 import model.CafeMenu;
 import view.EndView;
 import controller.SelectModel;
+
 public class CafeMenuManagement {
 
 	Scanner s = new Scanner(System.in);
@@ -15,7 +16,7 @@ public class CafeMenuManagement {
 	public void reqResMenu(int reqNo) {
 
 		
-		if (reqNo ==1) {
+		if (reqNo == 1) {
 			System.out.println("수정할 메뉴의 이름을 입력해주세요");
 			String updateMenu = s.next();
 			System.out.println("변경할 가격을 입력해주세요");
@@ -24,11 +25,15 @@ public class CafeMenuManagement {
 			EndView.MenuListView(allCafeMenuList);
 		
 		}else if (reqNo == 2) {
+			System.out.println("추가할 메뉴의 카테고리를 입력해주세요");
+			String appendCategory = s.next();
 			System.out.println("추가할 메뉴의 이름을 입력해주세요");
 			String appendMenu =  s.next();
 			System.out.println("추가할 메뉴의 가격을 입력해주세요");
 			int appendPrice = s.nextInt();
-			CafeMenu menu = new CafeMenu(appendMenu, appendPrice);
+			System.out.println("추가할 메뉴의 칼로리를 입력해주세요");
+			String appendCalorie = s.next();	
+			CafeMenu menu = new CafeMenu(appendCategory,appendMenu, appendPrice, appendCalorie);
 			instance.cafeMenuInsert(menu);
 			EndView.MenuListView(allCafeMenuList);
 		

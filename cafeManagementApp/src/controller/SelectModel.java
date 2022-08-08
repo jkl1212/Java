@@ -8,11 +8,11 @@ import controller.*;
 import view.EndView;
 
 public class SelectModel {
-Scanner s = new Scanner(System.in);
-SearchModel instance = SearchModel.getInstance();
-
-/** 진행중인 Project를 저장하는 배열 */
-private ArrayList <CafeMenu> cafeMenuList = new ArrayList <CafeMenu>();
+	Scanner s = new Scanner(System.in);
+	SearchModel instance = SearchModel.getInstance();
+	
+	/** 진행중인 Project를 저장하는 배열 */
+	private ArrayList <CafeMenu> cafeMenuList = new ArrayList <CafeMenu>();
 	
 	public void reqRes(int reqNo) {
 		while (true) {
@@ -20,7 +20,7 @@ private ArrayList <CafeMenu> cafeMenuList = new ArrayList <CafeMenu>();
 			System.out.println("1. 카페 메뉴 관리 \n2. 클라이언트 관리 \n3. 종료 "); //필요시 직원관리 추가 
 			reqNo = s.nextInt();
 			
-			if (reqNo ==1) {
+			if (reqNo == 1) {
 				ArrayList<CafeMenu> allCafeMenuList = instance.getCafeMenuList();		
 				EndView.MenuListView(allCafeMenuList);
 				System.out.println("1. 카페 메뉴 수정 \n2. 카페 메뉴 추가 \n3. 카페 메뉴 삭제 \n4. 종료 ");
