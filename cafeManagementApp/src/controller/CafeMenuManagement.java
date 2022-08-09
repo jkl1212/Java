@@ -5,12 +5,12 @@ import java.util.Scanner;
 
 import model.CafeMenu;
 import view.EndView;
-import controller.SelectModel;
+import controller.MenuSearchModel;
 
 public class CafeMenuManagement {
 
 	Scanner s = new Scanner(System.in);
-	SearchModel instance = SearchModel.getInstance();
+	MenuSearchModel instance = MenuSearchModel.getInstance();
 	ArrayList<CafeMenu> allCafeMenuList = instance.getCafeMenuList();	
 
 	public void reqResMenu(int reqNo) {
@@ -18,7 +18,7 @@ public class CafeMenuManagement {
 		
 		if (reqNo == 1) {
 			System.out.println("수정할 메뉴의 이름을 입력해주세요");
-			String updateMenu = s.next();
+			String updateMenu = s.nextLine();
 			System.out.println("변경할 가격을 입력해주세요");
 			int updatePrice = s.nextInt();
 			instance.cafeMenuUpdate(updateMenu, updatePrice);
@@ -26,7 +26,7 @@ public class CafeMenuManagement {
 		
 		}else if (reqNo == 2) {
 			System.out.println("추가할 메뉴의 카테고리를 입력해주세요");
-			String appendCategory = s.next();
+			String appendCategory = s.nextLine();
 			System.out.println("추가할 메뉴의 이름을 입력해주세요");
 			String appendMenu =  s.next();
 			System.out.println("추가할 메뉴의 가격을 입력해주세요");
@@ -39,9 +39,11 @@ public class CafeMenuManagement {
 		
 		}else if (reqNo == 3) {
 			System.out.println("삭제할 메뉴의 이름을 입력해주세요");
-			String deleteMenu = s.next();
+			
+			String deleteMenu = s.nextLine();
 			instance.cafeMenuDelete(deleteMenu);
 			EndView.MenuListView(allCafeMenuList);
+			
 		}else if (reqNo == 4) {
 			System.out.println("홈으로 돌아갑니다.");
 			

@@ -1,7 +1,7 @@
 package view;
 
 
-import controller.SearchModel;
+import controller.MenuSearchModel;
 import controller.SelectModel;
 import model.Cafe;
 import model.CafeMenu;
@@ -26,6 +26,7 @@ public class StartView {
 		
 		//카페 메뉴
 		//메뉴 카테고리, 메뉴 이름, 메뉴 가격, 메뉴 칼로리
+		
 		CafeMenu cafeMenu1 = new CafeMenu("콜드 브루 커피", "돌체 콜드 브루", 6000, "265kcal");
 		CafeMenu cafeMenu2 = new CafeMenu("콜드 브루 커피", "콜드 브루", 4900, "5kcal");
 		CafeMenu cafeMenu3 = new CafeMenu("콜드 브루 커피", "콜드 브루 오트 라떼", 5800, "120kcal");
@@ -59,14 +60,9 @@ public class StartView {
 		Employee employee3 = new Employee("황서아", 28, "hsa@conmany.com","010-7735-2427", 203, "서울 서초구 동광로 99 2층","991112-2593963",'F',"11월22일");
 		Employee employee4 = new Employee("나서윤", 30, "nsu@conmany.com","010-6612-5523", 204, "서울특별시 종로구 자하문로16길 8","980922-2693843",'F',"9월22일");
 	
-		
-		
-		SearchModel instance = SearchModel.getInstance();
-		
-		
-		SelectModel s = new SelectModel();
-		
-			
+
+		MenuSearchModel instance = MenuSearchModel.getInstance();
+					
 		instance.cafeMenuInsert(cafeMenu1);
 		instance.cafeMenuInsert(cafeMenu2);
 		instance.cafeMenuInsert(cafeMenu3);
@@ -77,19 +73,18 @@ public class StartView {
 		instance.cafeMenuInsert(cafeMenu8);
 		instance.cafeMenuInsert(cafeMenu9);
 		instance.cafeMenuInsert(cafeMenu10);
-		instance.cafeMenuInsert(cafeMenu11);
-		instance.cafeMenuInsert(cafeMenu12);
-		instance.cafeMenuInsert(cafeMenu13);
-		instance.cafeMenuInsert(cafeMenu14);
-		instance.cafeMenuInsert(cafeMenu15);
-		instance.cafeMenuInsert(cafeMenu16);
-		instance.cafeMenuInsert(cafeMenu17);
-		instance.cafeMenuInsert(cafeMenu18);
-		instance.cafeMenuInsert(cafeMenu19);
-		instance.cafeMenuInsert(cafeMenu20);
-	
-		instance.cafeMenuInsert(cafeMenu1);
-			
+//		instance.cafeMenuInsert(cafeMenu11);
+//		instance.cafeMenuInsert(cafeMenu12);
+//		instance.cafeMenuInsert(cafeMenu13);
+//		instance.cafeMenuInsert(cafeMenu14);
+//		instance.cafeMenuInsert(cafeMenu15);
+//		instance.cafeMenuInsert(cafeMenu16);
+//		instance.cafeMenuInsert(cafeMenu17);
+//		instance.cafeMenuInsert(cafeMenu18);
+//		instance.cafeMenuInsert(cafeMenu19);
+//		instance.cafeMenuInsert(cafeMenu20);
+
+		SelectModel s = new SelectModel();
 		
 		s.reqRes(0);
 		

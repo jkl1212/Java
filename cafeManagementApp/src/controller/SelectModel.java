@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 import model.CafeMenu;
-import controller.*;
+import controller.MenuSearchModel;
 import view.EndView;
 
 public class SelectModel {
 	Scanner s = new Scanner(System.in);
-	SearchModel instance = SearchModel.getInstance();
+	MenuSearchModel instance = MenuSearchModel.getInstance();
 	
 	/** 진행중인 Project를 저장하는 배열 */
 	private ArrayList <CafeMenu> cafeMenuList = new ArrayList <CafeMenu>();
@@ -23,11 +23,12 @@ public class SelectModel {
 			if (reqNo == 1) {
 				ArrayList<CafeMenu> allCafeMenuList = instance.getCafeMenuList();		
 				EndView.MenuListView(allCafeMenuList);
-				System.out.println("1. 카페 메뉴 수정 \n2. 카페 메뉴 추가 \n3. 카페 메뉴 삭제 \n4. 종료 ");
+				System.out.println("1. 카페 가격 수정 \n2. 카페 메뉴 추가 \n3. 카페 메뉴 삭제 \n4. 종료 ");
 				int reqNo2 = s.nextInt();
 				(new CafeMenuManagement()).reqResMenu(reqNo2);
 			
 			}else if (reqNo == 2) {
+				
 				
 			}else if(reqNo == 3){
 				s.close();

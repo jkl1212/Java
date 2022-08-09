@@ -7,8 +7,8 @@ import model.Clients;
 
 
 
-public class SearchModel {
-	private static SearchModel instance = new SearchModel();
+public class MenuSearchModel {
+	private static MenuSearchModel instance = new MenuSearchModel();
 
 	
 	/** 카페 메뉴를 저장하는 배열 */
@@ -18,9 +18,9 @@ public class SearchModel {
 	/** 카페 메뉴 총 개수 */
 	
 
-	private SearchModel() {}
+	private MenuSearchModel() {}
 
-	public static SearchModel getInstance() {
+	public static MenuSearchModel getInstance() {
 		return instance;
 		
 	}
@@ -88,14 +88,20 @@ public class SearchModel {
 	 * Menu 삭제 - 메뉴명으로 해당 메뉴 삭제
 	 * 
 	 * @param cafeMenuName 삭제하고자 하는 메뉴 이름
+	 * @throws Exception 
 	 */
-	public void cafeMenuDelete(String menuName) {
-		
+	public void cafeMenuDelete(String menuName)  {
+	
+		System.out.println("d999" +  menuName);
 		for(CafeMenu menu : cafeMenuList) {
 			if(menu.getMenuName().equals(menuName)) {
+				System.out.println(cafeMenuList);
 				cafeMenuList.remove(menu);
-             
+				System.out.println(cafeMenuList);
+				
 				break;
+//			}else {
+//				throw new Exception("해당 Menu가 존재하지 않습니다. 재확인하세요");
 			}
 		}
 	}
@@ -125,3 +131,4 @@ public class SearchModel {
 
 
 }
+
