@@ -1,3 +1,13 @@
+/**
+ * PROJ : 카페메뉴 관리 서비스
+ * FILE : MenuSearchModel.java
+ * DESC : 카페 메뉴를 저장, 수정, 삭제, 검색하는 서비스 로직 
+ * 
+ * 
+ * @저자 김규리
+ * 
+ * @version 1.0
+**/
 package controller;
 
 import java.util.ArrayList;
@@ -116,18 +126,6 @@ public class MenuSearchModel {
 		return cafeMenuList.size();
 	}
 	
-	 public static Clients CheckClientsID(String clientID) {
-	      // file reader를 통해 회원정보가 들어있는 배열 가져온다 가정 -> ArrayList<Clients>
-	      ArrayList<Clients> clientsInfo = new ArrayList<Clients>();
-	      Clients TempClient = null;
-
-	      for (Clients client : clientsInfo) {
-	         if (client.getClientID().equals(clientID)) {
-	            TempClient = client;
-	         }
-	      }
-	      return TempClient; // 해당 아이디를 가진 회원이 존재하지 않는 경우 null 값 반환
-	   }
 
 
 }

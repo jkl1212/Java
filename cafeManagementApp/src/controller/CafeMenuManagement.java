@@ -1,3 +1,4 @@
+
 package controller;
 
 import java.util.ArrayList;
@@ -52,6 +53,7 @@ public class CafeMenuManagement {
 			System.out.println("*** 무효한 검색 요청 *****\n");
 			System.out.println("다시 입력해주세요 \n");
 			System.out.println("*****************************\n");
+		
 		}
 	}
 }

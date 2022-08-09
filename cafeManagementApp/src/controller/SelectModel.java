@@ -5,9 +5,9 @@ import java.util.Scanner;
 
 import model.CafeMenu;
 import model.Clients;
-import controller.ClientsSearchModel;
-import controller.MenuSearchModel;
 import view.EndView;
+
+import controller.ClientsMangement;
 
 public class SelectModel {
 	Scanner s = new Scanner(System.in);
@@ -33,7 +33,8 @@ public class SelectModel {
 			}else if (reqNo == 2) {
 				ArrayList<Clients>allClienstList = instance2.getClientsList();
 				System.out.println("1. 로그인 \n2.회원가입 \n3.아이디 비밀번호 찾기 \n4.프로그램 종료");
-				
+				int reqNo2 = s.nextInt();
+				(new ClientsMangement()).reqResClients(reqNo2);
 			}else if(reqNo == 3){
 				s.close();
 				System.out.println("종료하겠습니다 \n");
@@ -43,6 +44,7 @@ public class SelectModel {
 				System.out.println("*** 무효한 검색 요청 *****\n");
 				System.out.println("다시 입력해주세요 \n");
 				System.out.println("*****************************\n");
+				
 			}
 		
 		}
