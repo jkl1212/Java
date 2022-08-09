@@ -4,12 +4,15 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 import model.CafeMenu;
+import model.Clients;
+import controller.ClientsSearchModel;
 import controller.MenuSearchModel;
 import view.EndView;
 
 public class SelectModel {
 	Scanner s = new Scanner(System.in);
 	MenuSearchModel instance = MenuSearchModel.getInstance();
+	ClientsSearchModel instance2 = ClientsSearchModel.getInstance();
 	
 	/** 진행중인 Project를 저장하는 배열 */
 	private ArrayList <CafeMenu> cafeMenuList = new ArrayList <CafeMenu>();
@@ -28,7 +31,8 @@ public class SelectModel {
 				(new CafeMenuManagement()).reqResMenu(reqNo2);
 			
 			}else if (reqNo == 2) {
-				
+				ArrayList<Clients>allClienstList = instance2.getClientsList();
+				System.out.println("1. 로그인 \n2.회원가입 \n3.아이디 비밀번호 찾기 \n4.프로그램 종료");
 				
 			}else if(reqNo == 3){
 				s.close();
