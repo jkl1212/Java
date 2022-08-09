@@ -1,8 +1,9 @@
 /**
- * PROJ : 카페 데이터 관리
+ * PROJ : 고객 데이터 관리
  * FILE : Clients.java
  * DESC : 고객 정보 
  * 
+ * @author 
  * @version 1.0
 **/
 package model;

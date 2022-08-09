@@ -1,3 +1,11 @@
+/** 
+ * PROJECT  : 카페 관리 프로젝트
+ * NAME  :  EndView.java
+ * DESC  : 카페관리 출력클래스
+ * 
+ * @author  kyuriKim
+ * @version 1.0
+*/
 package view;
 
 import java.util.ArrayList;

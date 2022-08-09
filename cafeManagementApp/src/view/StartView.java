@@ -1,3 +1,13 @@
+/** 
+ * PROJECT  : 카페 관리 프로젝트
+ * NAME  :  StartView.java
+ * DESC  : 실행 클래스
+ * 		     카페명, 카페 메뉴, 고객, 직원 및 실제 진행되는 프로젝트 생성 및 CRUD 로직을 test하는 클래스
+ * 
+ * @author  
+ * @version 1.0
+*/
+
 package view;
 
 
